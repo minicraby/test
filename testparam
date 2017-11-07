@@ -33,7 +33,7 @@ tuple2 = ("fever", 0.1)
 state, p = max(tuple1, tuple2)
 print "the max() result is : state= %s, p= %s" % (state, p)
 
-"""        
+"""  comment code block      
 for t in range(len(result_m)-1, 0, -1):
         _, pre_state=result_m[t][pre_state]
         print "number %d pre_state is %s:" %(t, pre_state)  
