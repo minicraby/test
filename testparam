@@ -1,0 +1,40 @@
+#!python
+
+result_m = [{"healthy": (0.3, "None"), "fever": (0.04, "None")},
+            {"healthy": (0.084, "healthy"), "fever": (0.027, "healthy")},
+            {"healthy": (0.005588, "healthy"), "fever": (0.027, "healthy")}]
+            
+         
+
+for i in range(1, len(result_m), 1):
+        _, pre_state=result_m[i][pre_state]
+        print "pre_state: %s" % pre_state
+        print "number %d values %s" %(i, result_m[i].values())
+        print "number %d keys %s" % (i, result_m[i].keys())  
+ 
+(p, pre_state), final_state = max(zip(result_m[len(result_m)-1].values(),result_m[len(result_m)-1].keys()))
+print "the p is %s, pre_state is %s, the fianl_state is %s" %(p, pre_state, final_state)
+
+
+
+ 
+        
+final_state, (p, pre_state) = max(zip(result_m[len(result_m)-1].keys(), result_m[len(result_m)-1].values()))
+print "second time: the p is %s, pre_state is %s, the fianl_state is %s" %(p, pre_state, final_state)
+
+test_state, test_order = max(("fever", 2), ("healthy", 1))
+print "test max 2 tuples: state:%s, order %d" % (test_state, test_order)
+
+test = max("bign",  "aignc")
+print "test is: %s" % test
+
+tuple1 =  ("fever", 0.9)
+tuple2 = ("fever", 0.1)
+state, p = max(tuple1, tuple2)
+print "the max() result is : state= %s, p= %s" % (state, p)
+
+"""        
+for t in range(len(result_m)-1, 0, -1):
+        _, pre_state=result_m[t][pre_state]
+        print "number %d pre_state is %s:" %(t, pre_state)  
+"""   
